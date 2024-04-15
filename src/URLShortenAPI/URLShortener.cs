@@ -2,7 +2,7 @@
 public class URLShortener {
     public static string Shorten(string? url, ShrinkUrlSettings urlSettings) {
         url = url?.Trim();
-        //ArgumentException.ThrowIfNullOrEmpty(url);
+        ArgumentException.ThrowIfNullOrEmpty(url);
 
         if (!TryGetValidURL(url, out Uri? uri)) throw new FormatException();
 
